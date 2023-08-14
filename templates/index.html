@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Currency Exchanger{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="card">
+        <form method="POST">
+            <div class="line">
+                <label for="amount">Сумма</label>
+                <input class="input_amount" id='amount' name="amount" type="number"  placeholder="Введите число" value="" >
+            </div>
+            <div class="line">
+                <label for="give_curr">Отдаем {{ title }}</label>
+                <select class="selector" id="give_curr" name="give_curr" value="0">
+                    {% for currency in currencies %}
+                        <option value="{{ currency }}">{{ currency }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="line">
+                <label for="take_curr">Получаем</label>
+                <select class="selector" id="take_curr" name="take_curr" value="0">
+                    {% for currency in currencies %}
+                        <option value="{{ currency }}">{{ currency }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <hr>
+            <button type="submit">Отправить</button>
+        </form>
+        <div class="result">
+            {% if converted_amount %}
+            {{ converted_amount }}
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

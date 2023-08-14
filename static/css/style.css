@@ -1,0 +1,85 @@
+html {
+    --s: 50px;
+    --c: #191b22;
+    --_s: calc(2*var(--s)) calc(2*var(--s));
+    --_g: 35.36% 35.36% at;
+    --_c: #0000 66%,#20222a 68% 70%,#0000 72%;
+    background: 
+      radial-gradient(var(--_g) 100% 25%,var(--_c)) var(--s) var(--s)/var(--_s), 
+      radial-gradient(var(--_g) 0 75%,var(--_c)) var(--s) var(--s)/var(--_s), 
+      radial-gradient(var(--_g) 100% 25%,var(--_c)) 0 0/var(--_s), 
+      radial-gradient(var(--_g) 0 75%,var(--_c)) 0 0/var(--_s), 
+      repeating-conic-gradient(var(--c) 0 25%,#0000 0 50%) 0 0/var(--_s), 
+      radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
+    background-attachment: fixed;
+    font-family:Oswald;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.card {
+    font-size: 26px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color: #EEEEEE;
+    width: 70%;
+    margin: 120px 20px 10px 20px;
+    padding: 40px;
+    background-color: rgba(32, 34, 42, 0.8);
+    box-shadow: 0 5px 15px rgb(255, 0, 0);
+    border-radius: 30px;
+    transition: 0.5s;
+    text-align: center;
+}
+
+button {
+    font-size: 26px;
+    text-transform:uppercase;
+    border-radius: 34px;
+    color: #fff; /* цвет текста */
+    text-decoration: none; /* убирать подчёркивание у ссылок */
+    user-select: none; /* убирать выделение текста */
+    background: rgb(108 0 0); /* фон кнопки */
+    padding: .7em 1.5em; /* отступ от текста */
+    outline: none; /* убирать контур в Mozilla */
+}
+
+button:hover {
+    color: #000;
+    background: #F3F3F3;
+    transition:all 0.5s;
+    }
+a.button:active { background: rgb(152,15,0); } /* при нажатии */
+
+#amount {
+    font-family:Oswald;
+    border-radius: 15px;
+    background: #ffffff !important;
+    outline-color: #eb0000;
+    height: 30px;
+    width: 220px;
+    color: #eb0000;
+    font-size: 20px;
+    text-align: center;
+}
+
+.line {
+    padding: 5px;
+    margin: 10px;
+}
+
+.selector {
+    border-radius: 15px;
+    background: #ffffff !important;
+    outline-color: #eb0000;
+    height: 30px;
+    width: 220px;
+    color: #eb0000;
+    font-size: 20px;
+    text-align: center;
+}
