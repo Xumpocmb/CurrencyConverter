@@ -7,11 +7,11 @@
     <div class="card">
         <form method="POST">
             <div class="line">
-                <label for="amount">Сумма</label>
+                <label for="amount">Amount: </label>
                 <input class="input_amount" id='amount' name="amount" type="number"  placeholder="Введите число" value="" >
             </div>
             <div class="line">
-                <label for="give_curr">Отдаем {{ title }}</label>
+                <label for="give_curr">Sell: {{ title }}</label>
                 <select class="selector" id="give_curr" name="give_curr" value="0">
                     {% for currency in currencies %}
                         <option value="{{ currency }}">{{ currency }}</option>
@@ -19,7 +19,7 @@
                 </select>
             </div>
             <div class="line">
-                <label for="take_curr">Получаем</label>
+                <label for="take_curr">Buy: </label>
                 <select class="selector" id="take_curr" name="take_curr" value="0">
                     {% for currency in currencies %}
                         <option value="{{ currency }}">{{ currency }}</option>
@@ -27,7 +27,7 @@
                 </select>
             </div>
             <hr>
-            <button type="submit">Отправить</button>
+            <button type="submit">Convert</button>
         </form>
         <div class="result">
             {% if converted_amount %}
